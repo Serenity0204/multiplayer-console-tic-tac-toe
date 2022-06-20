@@ -1,0 +1,53 @@
+Name: Yu-Heng Lin
+Project: Tic Tac Toe 2.0
+Final Modification Date 06/20/2022
+
+
+
+* Attribute
+- method
+@ constructor
+# main
+
+------------------------------------------------------------------------------------
+Board
+    @ public Board(int playerNum)
+    * private static LinkedHashMap<List<Integer>, Character> boardMap;
+    * private static int boardSize;
+
+    public:
+    - public static char getBoard(int row, int col)
+    - public static int getBoardSize()
+    - public static void placeMove(int row, int col, char player)
+    - public static boolean isFull()
+    - public void printBoard()
+------------------------------------------------------------------------------------
+GameLogic
+    * private static int winningRow;
+    public:
+    - public static boolean checkWin(int row, int col)
+    - public static int getWinningRow()
+    - public static void setWinningRow(int winningRow)
+    - public static boolean validMove(int row, int col)
+
+    private:
+    - private static boolean checkDiagonal(int row, int col, boolean mode)
+    - private static boolean checkHorizontalOrVertical(int row, int col, boolean colOrRow)
+    - private static boolean matching(ArrayList<Character> seq)
+------------------------------------------------------------------------------------
+    
+TicTacToe
+    # public static void main(String[] args)
+    private:
+    - private static void clearScreen() 
+    - private static void init()
+------------------------------------------------------------------------------------
+Player
+    * private static Queue<Character> turns = new LinkedList<Character>();
+    * private static HashSet<Character> valid = new HashSet<Character>();
+    
+    public:
+    - public static void addPlayer(char representation)
+    - public static boolean canAddPlayer(char representation)
+    - public static void nextTurn()
+    - public static char whosTurn()
