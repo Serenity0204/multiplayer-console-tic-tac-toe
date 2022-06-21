@@ -65,7 +65,7 @@ public class GameLogic {
     public static boolean validMove(int row, int col)
     {
         int boardSize = Board.getBoardSize();
-        if(row > boardSize || col > boardSize) return false;
+        if(row > boardSize || col > boardSize || row < 1 || col < 1) return false;
         char coordinate = Board.getBoard(row, col);
         if(coordinate != '-') return false;
         return true;
