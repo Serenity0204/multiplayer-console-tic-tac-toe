@@ -18,8 +18,6 @@ public class GameLogic {
     {   
         boolean horizontal = GameLogic.checkHorizontalOrVertical(row, col, true);
         boolean vertical = GameLogic.checkHorizontalOrVertical(row, col, false);
-        //boolean botLeftToTopRight = GameLogic.checkDiagonal(row, col, true);
-        //boolean topLeftToBotRight = GameLogic.checkDiagonal(row, col, false);
         boolean checkDia = GameLogic.checkDiagonal();
         if(horizontal || vertical || checkDia) return true;
         return false;
